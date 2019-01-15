@@ -1,0 +1,73 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+.content {
+  margin-bottom: 100rpx;
+}
+.uni-list-cell {
+  position: relative;
+  width: 690rpx;
+  margin: 40rpx auto 0;
+  border: 2rpx solid #E6E6E6;
+}
+.uni-list-cell .cell-top {
+  position: relative;
+  padding-top: 26rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uni-list-cell .cell-top .user-name {
+  font-size: 36rpx;
+  color: #1F1F1F;
+  padding-left: 40rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-left: 10rpx solid #FF9833;
+}
+.uni-list-cell .cell-top .get-order {
+  width: 134rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-indent: 10rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background: #FF9833;
+  text-align: center;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.uni-list-cell .cell-mid {
+  text-align: center;
+  margin: 52rpx 0 62rpx;
+  font-size: 40rpx;
+  color: #FF9833;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.uni-list-cell .cell-mid .date {
+  margin: 0 100rpx;
+}
+.uni-list-cell .cell-btm {
+  width: 652rpx;
+  margin: 0 auto 20rpx;
+  font-size: 28rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  color: #A4A3AC;
+  background: #fef9f4;
+  overflow: hidden;
+}
+.uni-list-cell .cell-btm .order-des {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}

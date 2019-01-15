@@ -1,0 +1,12 @@
+<template name="3c22baa4">
+  <view class="_view data-v-ab57e4c0 content">
+    <view class="_view data-v-ab57e4c0 title">请输入提现金额</view>
+    <view class="_view data-v-ab57e4c0 input-wrap">
+      <view class="_view data-v-ab57e4c0 icon">￥</view>
+      <input value="{{amount}}" bindinput="handleProxy" type="number" data-eventid="{{'Spv-0'}}" data-comkey="{{$k}}" class="_input data-v-ab57e4c0" />
+    </view>
+    <view class="_view data-v-ab57e4c0 btn-row">
+      <button type="primary" class="_button data-v-ab57e4c0 primary" disabled="{{!amount}}" bindtap="handleProxy" data-eventid="{{'ZNW-1'}}" data-comkey="{{$k}}">提现</button>
+    </view>
+  </view>
+</template>

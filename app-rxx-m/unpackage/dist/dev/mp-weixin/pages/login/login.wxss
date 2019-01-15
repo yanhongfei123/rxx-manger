@@ -1,0 +1,95 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+.content {
+  height: 100%;
+  background: #fff;
+}
+.auto-wrap {
+  width: 600rpx;
+  margin: 0 auto;
+}
+.input-row {
+  height: 116rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.uni-input {
+  padding-left: 36rpx;
+}
+.logo {
+  width: 134rpx;
+  height: 134rpx;
+  margin: 134rpx auto;
+  display: block;
+}
+.icon {
+  width: 30rpx;
+  height: 38rpx;
+  margin-right: 25rpx;
+}
+.action-row {
+  padding: 32rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.action-row .f-pas {
+  font-size: 30rpx;
+  color: #BBB;
+}
+.action-row .register {
+  font-size: 30rpx;
+  color: #FF9833;
+}
+.btn-row {
+  margin: 80rpx 0 135rpx;
+  border-radius: 100rpx;
+  over-flow: hidden;
+}
+.btn-row #primary {
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #BBB;
+  border-radius: 100rpx;
+  font-size: 34rpx;
+}
+.btn-row #primary.primary {
+  background: #FF9833;
+  color: #fff;
+}
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.footer .footer-des {
+  width: 360rpx;
+  color: #BBB;
+  font-size: 30rpx;
+}
+.footer .down-load {
+  width: 134rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #FF9833;
+  text-align: center;
+  border: 2rpx solid #FF9833;
+  border-radius: 6rpx;
+}

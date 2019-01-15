@@ -1,0 +1,28 @@
+<template name="5d76ade0">
+  <view class="_view data-v-423bb6df content">
+    <view class="_view data-v-423bb6df uni-list">
+      <view bindtap="handleProxy" class="_view data-v-423bb6df uni-list-cell" wx:key="index" key="{{index}}" data-eventid="{{'SeB-1-'+index}}" data-comkey="{{$k}}" wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_view data-v-423bb6df cell-top">
+          <view class="_view data-v-423bb6df user-name">{{item.CUSTOMER.user.NAME}}</view>
+          <view catchtap="handleProxy" class="_view data-v-423bb6df get-order" data-eventid="{{'4oU-0-'+index}}" data-comkey="{{$k}}">抢单</view>
+        </view>
+        <view class="_view data-v-423bb6df cell-mid">
+          <view class="_view data-v-423bb6df amount">{{item.amount}}</view>
+          <view class="_view data-v-423bb6df date">{{item.cyclename}}</view>
+          <view class="_view data-v-423bb6df time">{{item.UPDATE_TIME}}</view>
+        </view>
+        <view class="_view data-v-423bb6df cell-btm">
+          <view class="_view data-v-423bb6df order-des">{{item.typename}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.Career}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.Property}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.car}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.bank_flow}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.Credit}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.census}}</view>
+          <view class="_view data-v-423bb6df order-des">{{item.CUSTOMER.customer.Social_security}}</view>
+        </view>
+        <view class="_view data-v-423bb6df box-shadow"></view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,1 @@
+<import src="/pages/user/userInfo/businessCard.vue.wxml" /><template is="66eebb0c" data="{{ ...$root['0'], $root }}"/>

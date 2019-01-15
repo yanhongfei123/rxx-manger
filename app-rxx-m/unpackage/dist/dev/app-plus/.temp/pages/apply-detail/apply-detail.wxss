@@ -1,0 +1,62 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+page {
+  background: whitesmoke;
+}
+.content {
+  width: 688rpx;
+  margin: 30rpx auto;
+}
+.content .con-wrap {
+  background: #fff;
+  border-radius: 8rpx;
+}
+.content .capital-title {
+  height: 104rpx;
+  line-height: 104rpx;
+  color: #1F1F1F;
+  text-align: center;
+}
+.content .cell-mid {
+  padding: 30rpx 0 55rpx;
+  font-size: 40rpx;
+  color: #FF9833;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.content .cell-mid .des {
+  font-size: 24rpx;
+  color: #A4A3AC;
+  margin-top: 12rpx;
+}
+.content .cell-mid .mar110 {
+  margin: 0 110rpx;
+}
+.content .cell-btm {
+  padding: 0 0 20rpx 30rpx;
+}
+.content .info-title {
+  font-size: 32rpx;
+  color: #1A1A1A;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.content .user-info view {
+  font-size: 30rpx;
+  color: #A4A3AC;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+.content .tips {
+  font-size: 24rpx;
+  color: #FF9833;
+  margin-top: 30rpx;
+  text-align: center;
+}

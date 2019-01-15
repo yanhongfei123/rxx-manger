@@ -1,0 +1,29 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+.reg-label {
+  margin: 96rpx 0 66rpx 30rpx;
+  font-size: 55rpx;
+  color: #000;
+  font-weight: bold;
+}
+.placeholder {
+  color: #BBB;
+  font-size: 32rpx;
+}
+.input-row {
+  margin: 0 0 0 30rpx;
+  padding-right: 30rpx;
+}
+.input-row .uni-input {
+  font-size: 32rpx;
+  padding: 0;
+}
+.btn-row {
+  width: 690rpx;
+  margin: 165rpx auto 0;
+}
+.get-code {
+  font-size: 30rpx;
+  color: #FF9833;
+}

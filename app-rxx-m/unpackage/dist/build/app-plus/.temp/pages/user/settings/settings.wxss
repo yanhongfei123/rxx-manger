@@ -1,0 +1,2 @@
+@import "../../../common/vendor.wxss";
+.reg-label{margin:40rpx 0 0}.btn-row{width:690rpx;margin:380rpx auto 0}

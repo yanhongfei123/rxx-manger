@@ -1,0 +1,11 @@
+<template name="40dbdc6a">
+  <view class="_view data-v-6131e234 content">
+    <view class="_view data-v-6131e234 upload-title">上传工作证</view>
+    <view class="_view data-v-6131e234 upload-wrap" bindtap="handleProxy" data-eventid="{{'log-0'}}" data-comkey="{{$k}}">
+      <image class="_image data-v-6131e234 icon-card icon" src="{{imgSrc}}"></image>
+    </view>
+    <view class="_view data-v-6131e234 btn-row">
+      <button class="_button data-v-6131e234 btn-upload" type="primary" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'iln-1'}}" data-comkey="{{$k}}">完成</button>
+    </view>
+  </view>
+</template>

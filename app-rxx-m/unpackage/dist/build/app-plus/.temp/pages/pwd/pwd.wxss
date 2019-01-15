@@ -1,0 +1,2 @@
+@import "../../common/vendor.wxss";
+.reg-label{margin:40rpx 0 0}.placeholder{color:#bbb;font-size:32rpx}.input-row{margin:0 0 0 30rpx;padding-right:30rpx}.input-row ._input{font-size:32rpx}.input-row .uni-input{width:340rpx;font-size:32rpx;padding:0}.input-row .title{width:166rpx}.btn-row{width:690rpx;margin:165rpx auto 0}.get-code{font-size:30rpx;color:#ff9833}

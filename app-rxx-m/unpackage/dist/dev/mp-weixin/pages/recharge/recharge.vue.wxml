@@ -1,0 +1,31 @@
+<template name="46efe974">
+  <view class="_view data-v-529aac2c content">
+    <view class="_view data-v-529aac2c pad30">
+      <view class="_view data-v-529aac2c title">请选择充值金额</view>
+      <view class="_view data-v-529aac2c uni-list">
+        <view bindtap="handleProxy" class="_view data-v-529aac2c uni-list-cell {{[  item == '其他金额' ? 'colo_A4A3AC' : '',  chargeAmountIndex == index ? 'selected' : '']}}" wx:key="index" key="{{index}}" data-eventid="{{'TQe-1-'+index}}" data-comkey="{{$k}}"
+          wx:for="{{rechargeAmountTextList}}" wx:for-index="index" wx:for-item="item">
+          <view wx:if="{{item !== '其他金额'}}" class="_view data-v-529aac2c">{{item}}</view>
+          <view wx:else class="_view data-v-529aac2c">
+            <input placeholder-style="color:#A4A3AC" placeholder="其他金额" value="{{otherAmount}}" bindinput="handleProxy" type="number" data-eventid="{{'xeg-0-'+index}}" data-comkey="{{$k}}" class="_input data-v-529aac2c" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-529aac2c line"></view>
+    <view class="_view data-v-529aac2c pad30">
+      <view class="_view data-v-529aac2c recharge-list">
+        <view class="_view data-v-529aac2c recharge-item {{[chargeTypeIndex == 0 ? 'choosed' : '']}}">
+          <view class="_view data-v-529aac2c recharge-type">
+            <image class="_image data-v-529aac2c vm weixin-icon" src="../../static/img/img/weixin.png" mode="widthFix"></image>
+            <view class="_view data-v-529aac2c recharge-weixin vm">微信支付</view>
+          </view>
+          <view class="_view data-v-529aac2c select-btn">
+            <image src="../../static/img/img/choosed.png" mode="widthFix" class="_image data-v-529aac2c"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button bindtap="handleProxy" type="primary" id="primary" hover-class="other-button-hover" data-eventid="{{'XWc-2'}}" data-comkey="{{$k}}" class="_button data-v-529aac2c">立即充值</button>
+  </view>
+</template>

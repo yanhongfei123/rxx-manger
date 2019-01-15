@@ -1,0 +1,2 @@
+@import "../../../common/vendor.wxss";
+.btn-row{width:690rpx;margin:190rpx auto}.textarea{width:650rpx;padding:20rpx;margin:30rpx auto;font-size:32rpx;border:2rpx solid #e6e6e6}

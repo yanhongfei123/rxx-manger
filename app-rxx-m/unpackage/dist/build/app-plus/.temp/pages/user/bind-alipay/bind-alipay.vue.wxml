@@ -1,0 +1,14 @@
+<template name="12b59c3f">
+  <view class="_view data-v-70b047d4 content">
+    <view class="_view data-v-70b047d4 reg-label"></view>
+    <view class="_view data-v-70b047d4 input-group">
+      <view class="_view data-v-70b047d4 input-row">
+        <text class="_text data-v-70b047d4 title">支付宝账号：</text>
+        <input class="_input data-v-70b047d4 uni-input" type="number" maxlength="20" value="{{alipay}}" bindinput="handleProxy" placeholder-class="placeholder" placeholder="请输入支付宝账号" data-eventid="{{'C5i-0'}}" data-comkey="{{$k}}" />
+      </view>
+    </view>
+    <view class="_view data-v-70b047d4 btn-row">
+      <button type="primary" class="_button data-v-70b047d4 primary" disabled="{{!alipay}}" bindtap="handleProxy" data-eventid="{{'eLj-1'}}" data-comkey="{{$k}}">立即绑定</button>
+    </view>
+  </view>
+</template>

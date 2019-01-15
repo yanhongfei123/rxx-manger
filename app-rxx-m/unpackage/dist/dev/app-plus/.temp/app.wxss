@@ -1,0 +1,57 @@
+@import "common/vendor.wxss";
+
+@charset "UTF-8";
+page {
+  min-height: 100%;
+}
+._button[type=primary] {
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background-color: #FF9833;
+}
+._button[disabled][type=primary] {
+  color: #fff;
+  background-color: #BBB;
+}
+.btn-upload {
+  border-radius: 44rpx;
+}
+.icon-right {
+  width: 22rpx;
+  height: 22rpx;
+  border: 2rpx solid #bbb;
+  border-left: none;
+  border-bottom: none;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.input-row {
+  position: relative;
+  height: 116rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.input-row .title {
+  width: 158rpx;
+  font-size: 32rpx;
+  color: #454545;
+}
+.space-between {
+  margin: 0 0 0 30rpx;
+  padding-right: 30rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uni-input {
+  padding-left: 36rpx;
+}

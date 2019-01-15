@@ -1,0 +1,1 @@
+<import src="/pages/getCash/getCash.vue.wxml" /><template is="3c22baa4" data="{{ ...$root['0'], $root }}"/>

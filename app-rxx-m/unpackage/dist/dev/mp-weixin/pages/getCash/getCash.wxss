@@ -1,0 +1,32 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+.title {
+  color: #1A1A1A;
+  font-size: 34rpx;
+  margin: 100rpx 0 70rpx;
+  text-align: center;
+}
+.input-wrap {
+  width: 650rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  border: 2rpx solid #E6E6E6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.input-wrap .icon {
+  font-size: 55rpx;
+  color: #FF9833;
+  margin: 0 30rpx;
+}
+.input-wrap ._input {
+  font-size: 36rpx;
+}
+.btn-row {
+  margin: 210rpx auto;
+}

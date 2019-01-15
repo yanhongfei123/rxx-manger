@@ -1,0 +1,12 @@
+<import src="/components/load-more.vue.wxml" />
+<template name="4ba59228">
+  <view class="_view data-v-badabc44">
+    <view class="_view data-v-badabc44 partner-list" wx:if="{{partnerList.length>0}}">
+      <view class="_view data-v-badabc44 partner-item" wx:key="index" key="{{index}}" wx:for="{{partnerList}}" wx:for-index="index" wx:for-item="partner">
+        <view class="_view data-v-badabc44 name">姓名：{{partner.name}}</view>
+        <view class="_view data-v-badabc44 mobile">手机号码：{{partner.mobile}}</view>
+      </view>
+    </view>
+    <template data="{{...$root['0'], ...$root[$kk+'mcj-0'],$root}}" is="0fe50276"></template>
+  </view>
+</template>

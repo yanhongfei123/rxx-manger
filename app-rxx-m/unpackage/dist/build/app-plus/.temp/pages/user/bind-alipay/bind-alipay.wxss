@@ -1,0 +1,2 @@
+@import "../../../common/vendor.wxss";
+.placeholder{color:#bbb}.input-row{margin:0 0 0 30rpx;padding-right:30rpx}.input-row .uni-input{width:340rpx;font-size:32rpx;padding:0}.input-row .title{width:200rpx}.btn-row{width:690rpx;margin:165rpx auto 0}

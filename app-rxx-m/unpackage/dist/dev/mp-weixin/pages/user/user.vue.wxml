@@ -1,0 +1,90 @@
+<template name="3d129b18">
+  <view class="_view data-v-640368a8 content">
+    <view class="_view data-v-640368a8 top-wrap">
+      <view class="_view data-v-640368a8 info-wrap">
+        <image style="width: 120rpx;height: 120rpx;" bindtap="handleProxy" class="_image data-v-640368a8 logo" src="{{logoSrc}}" mode="widthFix" data-eventid="{{'nd6-0'}}" data-comkey="{{$k}}"></image>
+        <view class="_view data-v-640368a8 info">
+          <view class="_view data-v-640368a8 name">{{name}}</view>
+          <view class="_view data-v-640368a8 tel">{{phone}}</view>
+        </view>
+      </view>
+      <view class="_view data-v-640368a8 btn-wrap">
+        <button bindtap="handleProxy" type="primary" class="_button data-v-640368a8 deposit" data-eventid="{{'Jag-1'}}" data-comkey="{{$k}}">充值</button>
+        <button bindtap="handleProxy" type="primary" class="_button data-v-640368a8 withdraw" data-eventid="{{'ejG-2'}}" data-comkey="{{$k}}">提现</button>
+      </view>
+    </view>
+    <view class="_view data-v-640368a8 b-line"></view>
+    <view class="_view data-v-640368a8 uni-list">
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'oKj-3'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/info.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">个人信息</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+      <view class="_view data-v-640368a8 uni-list-cell">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/friend.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">好友</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+          <button class="_button data-v-640368a8 share-btn" open-type="share"></button>
+        </view>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'TSv-4'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/friend.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">我的推广</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'QOO-5'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/comment.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">意见反馈</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'UVN-6'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/about.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">关于融小小</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'9jS-7'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/set.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">设置</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-640368a8 uni-list-cell" data-eventid="{{'xhV-8'}}" data-comkey="{{$k}}">
+        <image style="width: 36rpx;height: 36rpx;" class="_image data-v-640368a8 icon" mode="widthFix" src="/static/img/set.png"></image>
+        <view class="_view data-v-640368a8 input-row  space-between">
+          <text class="_text data-v-640368a8 title">资金流水</text>
+          <view class="_view data-v-640368a8 icon-right"></view>
+        </view>
+      </view>
+    </view>
+    <view hidden="{{!(isShowMask)}}" bindtap="handleProxy" class="_view data-v-640368a8 share-content-mask" data-eventid="{{'Web-13'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-640368a8 share-content">
+        <view class="_view data-v-640368a8 share-des">分享至</view>
+        <view class="_view data-v-640368a8 share-list">
+          <view bindtap="handleProxy" class="_view data-v-640368a8 share-item" data-eventid="{{'LnX-9'}}" data-comkey="{{$k}}">
+            <image src="/static/img/img/wx.png" mode="widthFix" class="_image data-v-640368a8"></image>
+            <view class="_view data-v-640368a8 share-type">微信</view>
+          </view>
+          <view bindtap="handleProxy" class="_view data-v-640368a8 share-item" data-eventid="{{'ykq-10'}}" data-comkey="{{$k}}">
+            <image src="/static/img/img/pyq.png" mode="widthFix" class="_image data-v-640368a8"></image>
+            <view class="_view data-v-640368a8 share-type">朋友圈</view>
+          </view>
+          <view bindtap="handleProxy" class="_view data-v-640368a8 share-item" data-eventid="{{'Icx-11'}}" data-comkey="{{$k}}">
+            <image src="/static/img/img/qq.png" mode="widthFix" class="_image data-v-640368a8"></image>
+            <view class="_view data-v-640368a8 share-type">QQ</view>
+          </view>
+        </view>
+        <button bindtap="handleProxy" class="_button data-v-640368a8 hideMask" type="primary" data-eventid="{{'AJK-12'}}" data-comkey="{{$k}}">取消</button>
+      </view>
+    </view>
+  </view>
+</template>

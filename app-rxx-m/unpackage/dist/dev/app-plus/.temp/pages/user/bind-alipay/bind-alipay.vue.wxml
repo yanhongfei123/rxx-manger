@@ -1,0 +1,14 @@
+<template name="48cdd4d0">
+  <view class="_view data-v-db5d1fbe content">
+    <view class="_view data-v-db5d1fbe reg-label"></view>
+    <view class="_view data-v-db5d1fbe input-group">
+      <view class="_view data-v-db5d1fbe input-row">
+        <text class="_text data-v-db5d1fbe title">支付宝账号：</text>
+        <input class="_input data-v-db5d1fbe uni-input" type="number" maxlength="20" value="{{alipay}}" bindinput="handleProxy" placeholder-class="placeholder" placeholder="请输入支付宝账号" data-eventid="{{'yRB-0'}}" data-comkey="{{$k}}" />
+      </view>
+    </view>
+    <view class="_view data-v-db5d1fbe btn-row">
+      <button type="primary" class="_button data-v-db5d1fbe primary" disabled="{{!alipay}}" bindtap="handleProxy" data-eventid="{{'QDM-1'}}" data-comkey="{{$k}}">保存</button>
+    </view>
+  </view>
+</template>

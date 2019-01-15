@@ -1,0 +1,122 @@
+@import "../../common/vendor.wxss";
+
+@charset "UTF-8";
+.no-data.data-v-b12fbe02 {
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+}
+.home.data-v-b12fbe02 {
+  margin-bottom: 100rpx;
+}
+.flex1.data-v-b12fbe02 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+image.data-v-b12fbe02 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.top-block.data-v-b12fbe02 {
+  padding: 30rpx 30rpx 26rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 200rpx;
+}
+.top-block .partner.data-v-b12fbe02 {
+  margin-left: 20rpx;
+}
+.split.data-v-b12fbe02 {
+  height: 20rpx;
+  background-color: #F5F5F5;
+}
+.action-block.data-v-b12fbe02 {
+  height: 172rpx;
+  padding: 28rpx 16rpx 0;
+}
+.customer-list.data-v-b12fbe02 {
+  padding: 0 30rpx;
+}
+.customer-list .title.data-v-b12fbe02 {
+  padding: 28rpx 0;
+  font-size: 34rpx;
+  line-height: 1;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+.customer-list .customer-item.data-v-b12fbe02 {
+  height: 380rpx;
+  border: 2rpx solid #F5F5F5;
+  box-shadow: 0 3rpx 4rpx 0 #EFEFEF;
+}
+.uni-list-cell.data-v-b12fbe02 {
+  position: relative;
+  width: 690rpx;
+  margin: 40rpx auto 0;
+  border: 2rpx solid #E6E6E6;
+}
+.uni-list-cell .cell-top.data-v-b12fbe02 {
+  position: relative;
+  padding-top: 26rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uni-list-cell .cell-top .user-name.data-v-b12fbe02 {
+  font-size: 36rpx;
+  color: #1F1F1F;
+  padding-left: 40rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-left: 10rpx solid #FF9833;
+}
+.uni-list-cell .cell-top .get-order.data-v-b12fbe02 {
+  width: 134rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-indent: 10rpx;
+  color: #fff;
+  font-size: 34rpx;
+  background: #FF9833;
+  text-align: center;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.uni-list-cell .cell-mid.data-v-b12fbe02 {
+  text-align: center;
+  margin: 52rpx 0 62rpx;
+  font-size: 40rpx;
+  color: #FF9833;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.uni-list-cell .cell-mid .date.data-v-b12fbe02 {
+  margin: 0 90rpx;
+}
+.uni-list-cell .cell-btm.data-v-b12fbe02 {
+  width: 652rpx;
+  margin: 0 auto 20rpx;
+  font-size: 28rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  color: #A4A3AC;
+  background: #fef9f4;
+  overflow: hidden;
+}
+.uni-list-cell .cell-btm .order-des.data-v-b12fbe02 {
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}

@@ -1,0 +1,16 @@
+<template name="6dcd0478">
+  <view class="_view data-v-dbc48dac content">
+    <view hidden="{{!(!orderList.length)}}" class="_view data-v-dbc48dac no-data">暂无数据</view>
+    <view class="_view data-v-dbc48dac uni-list">
+      <view bindtap="handleProxy" class="_view data-v-dbc48dac uni-list-cell" wx:key="index" key="{{index}}" data-eventid="{{'XqG-0-'+index}}" data-comkey="{{$k}}" wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_view data-v-dbc48dac order-number">订单编号: {{item.order_num}} </view>
+        <view class="_view data-v-dbc48dac cell-mid">
+          <view class="_view data-v-dbc48dac apply-money h-70">客户名称: {{item.CUSTOMER.user.NAME}}</view>
+          <view class="_view data-v-dbc48dac apply-name h-70">贷款产品: {{item.productname}} </view>
+          <view class="_view data-v-dbc48dac apply-type h-70">贷款类型: {{item.typename}} </view>
+          <view class="_view data-v-dbc48dac apply-date h-70">贷款周期: {{item.cyclename}} </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

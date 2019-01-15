@@ -1,0 +1,24 @@
+<import src="/components/countDown/countDown.vue.wxml" />
+<template name="ed3f5b54">
+  <view class="_view data-v-9e5f3e70 content">
+    <view class="_view data-v-9e5f3e70 reg-label"></view>
+    <view class="_view data-v-9e5f3e70 input-group">
+      <view class="_view data-v-9e5f3e70 input-row">
+        <text class="_text data-v-9e5f3e70 title">手机号：</text>
+        <input class="_input data-v-9e5f3e70 uni-input" type="number" maxlength="11" value="{{phone}}" bindinput="handleProxy" placeholder-class="placeholder" placeholder="请输入手机号码" data-eventid="{{'eql-0'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_view data-v-9e5f3e70 input-row">
+        <text class="_text data-v-9e5f3e70 title">验证码：</text>
+        <input class="_input data-v-9e5f3e70 uni-input" type="number" maxlength="6" value="{{smscode}}" bindinput="handleProxy" placeholder-class="placeholder" placeholder="请输入短信验证码" data-eventid="{{'mNK-1'}}" data-comkey="{{$k}}" />
+        <template ref="countDown" color="FF9833" size="30" bindcountDown="handleProxy" data-eventid="{{'tXU-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'UQy-0'],$root}}" is="a3c7d4c0"></template>
+      </view>
+      <view class="_view data-v-9e5f3e70 input-row">
+        <text class="_text data-v-9e5f3e70 title">新的密码：</text>
+        <input type="password" placeholder-class="placeholder" value="{{password}}" bindinput="handleProxy" placeholder="请输入新的密码" data-eventid="{{'wt8-3'}}" data-comkey="{{$k}}" class="_input data-v-9e5f3e70" />
+      </view>
+    </view>
+    <view class="_view data-v-9e5f3e70 btn-row">
+      <button type="primary" class="_button data-v-9e5f3e70 primary" disabled="{{_disabled}}" bindtap="handleProxy" data-eventid="{{'Fub-4'}}" data-comkey="{{$k}}">保存</button>
+    </view>
+  </view>
+</template>

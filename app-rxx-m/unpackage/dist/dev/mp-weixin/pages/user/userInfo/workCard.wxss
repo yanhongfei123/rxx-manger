@@ -1,0 +1,27 @@
+@import "../../../common/vendor.wxss";
+
+@charset "UTF-8";
+.content {
+  padding: 0 124rpx 88rpx;
+}
+.upload-title {
+  margin: 54rpx auto 86rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Regular;
+  color: #454545;
+}
+.icon-card {
+  display: block;
+  width: 450rpx;
+  height: 260rpx;
+  margin: 0 auto;
+}
+.btn-row {
+  width: 500rpx;
+  margin: 98rpx auto 0;
+  border-radius: 44rpx;
+}
+.btn-row ._button {
+  width: 100%;
+}

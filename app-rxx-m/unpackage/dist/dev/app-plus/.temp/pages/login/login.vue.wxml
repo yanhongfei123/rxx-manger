@@ -1,0 +1,29 @@
+<import src="/components/uni-input.vue.wxml" />
+<template name="2aea49a4">
+  <view class="_view data-v-7dd27e33 content">
+    <view class="_view data-v-7dd27e33 auto-wrap">
+      <image src="../../static/img/app-logo.png" class="_image data-v-7dd27e33 logo"></image>
+      <view class="_view data-v-7dd27e33 input-group">
+        <view class="_view data-v-7dd27e33 input-row border">
+          <image class="_image data-v-7dd27e33 icon-m icon" src="../../static/img/shouji.png"></image>
+          <template maxlength="11" type="text" clearable focus value="{{account}}" bindchange="handleProxy" placeholder="请输入手机号" data-eventid="{{'XgD-0'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'LUM-0'],$root}}" is="66f6f510"></template>
+        </view>
+        <view class="_view data-v-7dd27e33 input-row">
+          <image class="_image data-v-7dd27e33 icon-p icon" src="../../static/img/suo.png"></image>
+          <template type="password" displayable value="{{password}}" bindchange="handleProxy" placeholder="请输入密码" data-eventid="{{'FPF-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'qFF-1'],$root}}" is="66f6f510"></template>
+        </view>
+      </view>
+      <view class="_view data-v-7dd27e33 action-row">
+        <navigator class="_navigator data-v-7dd27e33 navigator f-pas" url="../pwd/pwd">忘记密码 ?</navigator>
+        <navigator class="_navigator data-v-7dd27e33 navigator register" url="../reg/reg">新用户注册</navigator>
+      </view>
+      <view class="_view data-v-7dd27e33 btn-row login-wrap">
+        <button type="primary" id="primary" loading="{{loading}}" hover-class="other-button-hover" disabled="{{disabled}}" bindtap="handleProxy" data-eventid="{{'P6e-2'}}" data-comkey="{{$k}}" class="_button data-v-7dd27e33 {{[!disabled ? 'primary' : '']}}">登录</button>
+      </view>
+      <view class="_view data-v-7dd27e33 footer">
+        <view class="_view data-v-7dd27e33 footer-des">信贷经理请下载融小小经理端，此版为贷款用户专用</view>
+        <view class="_view data-v-7dd27e33 down-load">立即下载</view>
+      </view>
+    </view>
+  </view>
+</template>

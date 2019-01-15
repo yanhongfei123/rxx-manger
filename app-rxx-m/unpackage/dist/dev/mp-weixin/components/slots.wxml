@@ -1,0 +1,4 @@
+<import src="/components/load-more.vue.wxml" />
+<import src="/components/countDown/countDown.vue.wxml" />
+<import src="/components/uni-input.vue.wxml" />
+<import src="/components/uni-icon/uni-icon.vue.wxml" />

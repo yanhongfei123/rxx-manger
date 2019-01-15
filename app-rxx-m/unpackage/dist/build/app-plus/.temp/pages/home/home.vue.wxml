@@ -1,0 +1,45 @@
+<template name="4f4a0218">
+  <view class="_view data-v-763acfa8 home">
+    <view class="_view data-v-763acfa8 top-block">
+      <view bindtap="handleProxy" class="_view data-v-763acfa8 financing flex1 fl" data-eventid="{{'ULx-0'}}" data-comkey="{{$k}}">
+        <image class="_image data-v-763acfa8 img-l" mode="widthFix" src="../../static/img/home/area-financing.png"></image>
+      </view>
+      <view bindtap="handleProxy" class="_view data-v-763acfa8 partner flex1 fl" data-eventid="{{'gEf-1'}}" data-comkey="{{$k}}">
+        <image class="_image data-v-763acfa8 img-r" mode="widthFix" src="../../static/img/home/area-partner.png"></image>
+      </view>
+    </view>
+    <view class="_view data-v-763acfa8 split"></view>
+    <view class="_view data-v-763acfa8 action-block">
+      <image src="../../static/img/home/action-btn.png" class="_image data-v-763acfa8"></image>
+    </view>
+    <view class="_view data-v-763acfa8 customer-list">
+      <view class="_view data-v-763acfa8 title">周边借款人</view>
+      <view hidden="{{!(!orderList.length)}}" class="_view data-v-763acfa8 no-data">暂无数据</view>
+      <view class="_view data-v-763acfa8 uni-list">
+        <view bindtap="handleProxy" class="_view data-v-763acfa8 uni-list-cell" wx:key="index" key="{{index}}" data-eventid="{{'hBN-3-'+index}}" data-comkey="{{$k}}" wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item">
+          <view class="_view data-v-763acfa8 cell-top">
+            <view class="_view data-v-763acfa8 user-name">{{item.CUSTOMER.user.NAME}}</view>
+            <view catchtap="handleProxy" class="_view data-v-763acfa8 get-order" data-eventid="{{'e2F-2-'+index}}" data-comkey="{{$k}}">抢单</view>
+          </view>
+          <view class="_view data-v-763acfa8 cell-mid">
+            <view class="_view data-v-763acfa8 amount">{{item.amount}}</view>
+            <view class="_view data-v-763acfa8 date">{{item.cyclename}}</view>
+            <view class="_view data-v-763acfa8 time">{{item.UPDATE_TIME}}</view>
+          </view>
+          <view class="_view data-v-763acfa8 cell-btm">
+            <view class="_view data-v-763acfa8 order-des">{{item.typename}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Career || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Property || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.car || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.bank_flow || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Credit || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.census || ''}}</view>
+            <view class="_view data-v-763acfa8 order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Social_security || ''}}</view>
+          </view>
+          <view class="_view data-v-763acfa8 box-shadow"></view>
+        </view>
+      </view>
+    </view>
+    <audio bindended="handleProxy" src="https://fangyuansu.oss-cn-shenzhen.aliyuncs.com/notifition.mp3" action="{{audioAction}}" data-eventid="{{'j4M-4'}}" data-comkey="{{$k}}" class="_audio data-v-763acfa8"></audio>
+  </view>
+</template>

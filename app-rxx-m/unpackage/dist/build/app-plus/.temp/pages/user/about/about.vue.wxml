@@ -1,0 +1,5 @@
+<template name="e735c136">
+  <view class="_view data-v-262854ba content">
+    <web-view webview-styles="{{webviewStyles}}" src="http://api.rongxiaoxiao.com/about" class="_web-view data-v-262854ba"></web-view>
+  </view>
+</template>
