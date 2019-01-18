@@ -1,1 +1,1 @@
-<import src="/pages/user/bind-alipay/bind-alipay.vue.wxml" /><template is="12b59c3f" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/user/bind-alipay/bind-alipay.vue.wxml" /><template is="48cdd4d0" data="{{ ...$root['0'], $root }}"/>

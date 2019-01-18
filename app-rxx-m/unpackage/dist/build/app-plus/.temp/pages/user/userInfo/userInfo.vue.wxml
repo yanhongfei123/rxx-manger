@@ -1,76 +1,76 @@
-<template name="560271ba">
-  <view class="_view data-v-76587784 content">
-    <view class="_view data-v-76587784 reg-label"></view>
-    <view class="_view data-v-76587784 input-group">
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">姓名</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.NAME}}" placeholder="请输入姓名" data-eventid="{{'lb9-0'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+<template name="316dbe3a">
+  <view class="_view data-v-414f2b6a content">
+    <view class="_view data-v-414f2b6a reg-label"></view>
+    <view class="_view data-v-414f2b6a input-group">
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">姓名</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.NAME}}" placeholder="请输入姓名" data-eventid="{{'rYW-0'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">手机号</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.PHONE}}" placeholder="请输入手机号码" data-eventid="{{'Pwx-1'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">手机号</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.PHONE}}" placeholder="请输入手机号码" data-eventid="{{'aG7-1'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view hidden="{{!(!token)}}" class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">设置密码</text>
-        <input bindinput="handleProxy" type="password" placeholder-class="placeholder" value="{{form.PASSWORD}}" placeholder="请输入密码" data-eventid="{{'t1D-2'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view hidden="{{!(!token)}}" class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">设置密码</text>
+        <input bindinput="handleProxy" type="password" placeholder-class="placeholder" value="{{form.PASSWORD}}" placeholder="请输入密码" data-eventid="{{'Tno-2'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">年龄</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.AGE}}" placeholder="请输入年龄" data-eventid="{{'m1T-3'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">年龄</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.AGE}}" placeholder="请输入年龄" data-eventid="{{'g6X-3'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">职位</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.POST}}" placeholder="请输入职业" data-eventid="{{'5WC-4'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">职位</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.POST}}" placeholder="请输入职业" data-eventid="{{'Cti-4'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">公司名称</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.COMPANY_NAME}}" placeholder="请输入公司名称" data-eventid="{{'6vj-5'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">公司名称</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.COMPANY_NAME}}" placeholder="请输入公司名称" data-eventid="{{'vyT-5'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">性别</text>
-        <picker class="_picker data-v-76587784 picker-item" mode="selector" range="{{sexList}}" range-key="sex" bindchange="handleProxy" data-eventid="{{'B0B-6'}}" data-comkey="{{$k}}">
-          <view class="_view data-v-76587784 picker-btn">{{ sexList[form.SEX].sex }}</view>
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">性别</text>
+        <picker class="_picker data-v-414f2b6a picker-item" mode="selector" range="{{sexList}}" range-key="sex" bindchange="handleProxy" data-eventid="{{'k2Q-6'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-414f2b6a picker-btn">{{ sexList[form.SEX].sex }}</view>
         </picker>
-        <view class="_view data-v-76587784 icon-right"></view>
+        <view class="_view data-v-414f2b6a icon-right"></view>
       </view>
-      <view bindtap="handleProxy" class="_view data-v-76587784 input-row  space-between" data-eventid="{{'FfZ-7'}}" data-comkey="{{$k}}">
-        <text class="_text data-v-76587784 title">业务类型</text>
-        <view class="_view data-v-76587784 icon-right"></view>
+      <view bindtap="handleProxy" class="_view data-v-414f2b6a input-row  space-between" data-eventid="{{'T88-7'}}" data-comkey="{{$k}}">
+        <text class="_text data-v-414f2b6a title">业务类型</text>
+        <view class="_view data-v-414f2b6a icon-right"></view>
       </view>
-      <view hidden="{{!(isshowbox)}}" class="_view data-v-76587784 box-list  flex">
-        <view class="_view data-v-76587784 box-label">业务类型:</view>
-        <view class="_view data-v-76587784 box-cont">
-          <view bindtap="handleProxy" wx:key="index" key="{{index}}" class="_view data-v-76587784 flex box-item" data-eventid="{{'qZ5-8-'+index}}" data-comkey="{{$k}}" wx:for="{{businessTypeList}}" wx:for-index="index" wx:for-item="item">
-            <view class="_view data-v-76587784 select-btn {{[item.isChecked ? 'checked' : '']}}">
-              <image src="/static/img/img/choosed.png" mode="widthFix" class="_image data-v-76587784"></image>
+      <view hidden="{{!(isshowbox)}}" class="_view data-v-414f2b6a box-list  flex">
+        <view class="_view data-v-414f2b6a box-label">业务类型:</view>
+        <view class="_view data-v-414f2b6a box-cont">
+          <view bindtap="handleProxy" wx:key="index" key="{{index}}" class="_view data-v-414f2b6a flex box-item" data-eventid="{{'MTg-8-'+index}}" data-comkey="{{$k}}" wx:for="{{businessTypeList}}" wx:for-index="index" wx:for-item="item">
+            <view class="_view data-v-414f2b6a select-btn {{[item.isChecked ? 'checked' : '']}}">
+              <image src="/static/img/img/choosed.png" mode="widthFix" class="_image data-v-414f2b6a"></image>
             </view>
-            <view class="_view data-v-76587784">{{item.name}}</view>
+            <view class="_view data-v-414f2b6a">{{item.name}}</view>
           </view>
         </view>
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">身份证号码</text>
-        <input maxlength="20" bindinput="handleProxy" placeholder-class="placeholder" type="text" clearable value="{{form.ID_CARD_NO}}" placeholder="请输入身份证号码" data-eventid="{{'j6b-9'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">身份证号码</text>
+        <input maxlength="20" bindinput="handleProxy" placeholder-class="placeholder" type="text" clearable value="{{form.ID_CARD_NO}}" placeholder="请输入身份证号码" data-eventid="{{'9J8-9'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between">
-        <text class="_text data-v-76587784 title">身份证有效期</text>
-        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.VALIDITY}}" placeholder="请输入身份证有效期" data-eventid="{{'R0K-10'}}" data-comkey="{{$k}}" class="_input data-v-76587784" />
+      <view class="_view data-v-414f2b6a input-row  space-between">
+        <text class="_text data-v-414f2b6a title">身份证有效期</text>
+        <input bindinput="handleProxy" type="text" placeholder-class="placeholder" value="{{form.VALIDITY}}" placeholder="请输入身份证有效期" data-eventid="{{'gEU-10'}}" data-comkey="{{$k}}" class="_input data-v-414f2b6a" />
       </view>
-      <view class="_view data-v-76587784 input-row  space-between" bindtap="handleProxy" data-eventid="{{'Uh4-11'}}" data-comkey="{{$k}}">
-        <text class="_text data-v-76587784 title">身份证</text>
-        <view hidden="{{!(isIdCardUploaded)}}" class="_view data-v-76587784 idcard-des des">已上传</view>
-        <view hidden="{{!(!isIdCardUploaded)}}" class="_view data-v-76587784 idcard-des des">未上传</view>
-        <view class="_view data-v-76587784 icon-right"></view>
+      <view class="_view data-v-414f2b6a input-row  space-between" bindtap="handleProxy" data-eventid="{{'Uby-11'}}" data-comkey="{{$k}}">
+        <text class="_text data-v-414f2b6a title">身份证</text>
+        <view hidden="{{!(isIdCardUploaded)}}" class="_view data-v-414f2b6a idcard-des des">已上传</view>
+        <view hidden="{{!(!isIdCardUploaded)}}" class="_view data-v-414f2b6a idcard-des des">未上传</view>
+        <view class="_view data-v-414f2b6a icon-right"></view>
       </view>
-      <view class="_view data-v-76587784 input-row  space-between" bindtap="handleProxy" data-eventid="{{'3zf-12'}}" data-comkey="{{$k}}">
-        <text class="_text data-v-76587784 title">工作证</text>
-        <view hidden="{{!(isWordCardUploaded)}}" class="_view data-v-76587784 workcard-des des">已上传</view>
-        <view hidden="{{!(!isWordCardUploaded)}}" class="_view data-v-76587784 workcard-des des">未上传</view>
-        <view class="_view data-v-76587784 icon-right"></view>
+      <view class="_view data-v-414f2b6a input-row  space-between" bindtap="handleProxy" data-eventid="{{'9sg-12'}}" data-comkey="{{$k}}">
+        <text class="_text data-v-414f2b6a title">工作证</text>
+        <view hidden="{{!(isWordCardUploaded)}}" class="_view data-v-414f2b6a workcard-des des">已上传</view>
+        <view hidden="{{!(!isWordCardUploaded)}}" class="_view data-v-414f2b6a workcard-des des">未上传</view>
+        <view class="_view data-v-414f2b6a icon-right"></view>
       </view>
     </view>
-    <view class="_view data-v-76587784 btn-row">
-      <button type="primary" bindtap="handleProxy" data-eventid="{{'CTC-13'}}" data-comkey="{{$k}}" class="_button data-v-76587784">保存</button>
+    <view class="_view data-v-414f2b6a btn-row">
+      <button type="primary" bindtap="handleProxy" data-eventid="{{'qJN-13'}}" data-comkey="{{$k}}" class="_button data-v-414f2b6a">保存</button>
     </view>
   </view>
 </template>

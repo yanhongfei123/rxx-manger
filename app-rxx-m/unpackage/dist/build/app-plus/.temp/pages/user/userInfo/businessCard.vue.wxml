@@ -1,13 +1,13 @@
-<template name="66eebb0c">
-  <view class="_view data-v-bdd8cbd6 content">
-    <view class="_view data-v-bdd8cbd6 upload-wrap">
-      <view class="_view data-v-bdd8cbd6 upload-title">上传名片</view>
-      <view class="_view data-v-bdd8cbd6 upload-wrap" bindtap="handleProxy" data-eventid="{{'txv-0'}}" data-comkey="{{$k}}">
-        <image class="_image data-v-bdd8cbd6 icon-card icon" src="{{imgSrc}}"></image>
+<template name="482f93de">
+  <view class="_view data-v-04e71cbc content">
+    <view class="_view data-v-04e71cbc upload-wrap">
+      <view class="_view data-v-04e71cbc upload-title">上传名片</view>
+      <view class="_view data-v-04e71cbc upload-wrap" bindtap="handleProxy" data-eventid="{{'KNV-0'}}" data-comkey="{{$k}}">
+        <image class="_image data-v-04e71cbc icon-card icon" src="{{imgSrc}}"></image>
       </view>
     </view>
-    <view class="_view data-v-bdd8cbd6 btn-row">
-      <button class="_button data-v-bdd8cbd6 btn-upload" type="primary" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'8Uv-1'}}" data-comkey="{{$k}}">提交</button>
+    <view class="_view data-v-04e71cbc btn-row">
+      <button class="_button data-v-04e71cbc btn-upload" type="primary" bindtap="handleProxy" disabled="{{disabled}}" data-eventid="{{'og1-1'}}" data-comkey="{{$k}}">提交</button>
     </view>
   </view>
 </template>

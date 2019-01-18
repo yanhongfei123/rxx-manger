@@ -509,7 +509,7 @@
 					// 上报经纬度	
 					this.timer = setInterval(() => {
 						this.getLocation();
-					}, 2000)
+					}, 5000)
 				})
 				// 添加一个关闭连接的监听器
 				socket.on('disconnect', () => {
@@ -561,11 +561,15 @@
 						}
 					}
 				});
+				//点击消息
+// 				  plus.push.addEventListener("click", function(msg) {
+//                     console.log(msg.payload);
+//                 }, false);
 				
 				//监听在线消息事件
 // 				plus.push.addEventListener("receive", function(msg){
 // 						//msg就是获取到的消息
-// 						plus.nativeUI.alert("数据来啦：");
+// 						plus.nativeUI.alert("数据来啦：====" + JSON.parse(msg.payload));
 // 						if (that.audioAction.method == 'pause') {
 // 							that.audioAction.method = 'play';
 // 						}		
@@ -575,7 +579,7 @@
 				uni.onPush({
 					provider: 'igexin',
 					success: function () {
-							plus.nativeUI.alert('监听透传成功');
+							//plus.nativeUI.alert('监听透传成功');
 					},
 					callback: function (data) {
 							plus.nativeUI.alert("接收到透传数据：" + JSON.stringify(data));

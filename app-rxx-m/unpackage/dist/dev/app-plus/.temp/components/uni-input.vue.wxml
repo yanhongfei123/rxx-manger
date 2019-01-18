@@ -1,9 +1,0 @@
-<import src="/components/uni-icon/uni-icon.vue.wxml" />
-<template name="66f6f510">
-  <view class="_view data-v-6efe5aee uni-input-view">
-    <input maxlength="{{maxlength}}" placeholder-class="placeholder" focus="{{focus_}}" type="{{inputType}}" value="{{value}}" bindinput="handleProxy" confirm-type="done" class="_input data-v-6efe5aee uni-input-input" placeholder="{{placeholder}}" password="{{type==='password'&&!showPassword}}"
-      bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'5br-0'}}" data-comkey="{{$k}}" />
-    <template wx:if="{{clearable_&&!displayable_&&value.length}}" color="#ccc" type="clear" size="20" bindtap="handleProxy" data-eventid="{{'7Iv-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'bq7-0'],$root}}" is="016b12ba"></template>
-    <template wx:if="{{displayable_}}" type="eye" size="20" bindtap="handleProxy" data-eventid="{{'Qyu-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'rnI-1'],$root}}" is="016b12ba"></template>
-  </view>
-</template>

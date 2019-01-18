@@ -1,1 +1,1 @@
-<import src="/pages/user/flow/flow.vue.wxml" /><template is="34f5b67a" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/user/flow/flow.vue.wxml" /><template is="fbc27d4c" data="{{ ...$root['0'], $root }}"/>

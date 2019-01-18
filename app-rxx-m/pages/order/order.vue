@@ -8,7 +8,7 @@
 					<view class="apply-money h-70">客户名称: {{item.CUSTOMER.user.NAME}}</view>
 					<view class="apply-name h-70">贷款产品: {{item.productname}} </view>
 					<view class="apply-type h-70">贷款类型: {{item.typename}} </view>
-					<view  class="apply-date h-70">贷款周期: {{item.cyclename}} </view>
+					<view  class="apply-date h-70">贷款周期: {{item.cyclename ||  ''}} </view>
 				</view>			
 			</view>
 		</view>

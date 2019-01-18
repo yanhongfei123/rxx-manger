@@ -1,9 +1,9 @@
 <import src="/components/uni-icon/uni-icon.vue.wxml" />
-<template name="0e1f9272">
-  <view class="_view data-v-64c2cf7c uni-input-view">
-    <input maxlength="{{maxlength}}" placeholder-class="placeholder" focus="{{focus_}}" type="{{inputType}}" value="{{value}}" bindinput="handleProxy" confirm-type="done" class="_input data-v-64c2cf7c uni-input-input" placeholder="{{placeholder}}" password="{{type==='password'&&!showPassword}}"
-      bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'yus-0'}}" data-comkey="{{$k}}" />
-    <template wx:if="{{clearable_&&!displayable_&&value.length}}" color="#ccc" type="clear" size="20" bindtap="handleProxy" data-eventid="{{'DXh-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'AXV-0'],$root}}" is="dc87ac94"></template>
-    <template wx:if="{{displayable_}}" type="eye" size="20" bindtap="handleProxy" data-eventid="{{'ZO9-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'HUc-1'],$root}}" is="dc87ac94"></template>
+<template name="66f6f510">
+  <view class="_view data-v-6efe5aee uni-input-view">
+    <input maxlength="{{maxlength}}" placeholder-class="placeholder" focus="{{focus_}}" type="{{inputType}}" value="{{value}}" bindinput="handleProxy" confirm-type="done" class="_input data-v-6efe5aee uni-input-input" placeholder="{{placeholder}}" password="{{type==='password'&&!showPassword}}"
+      bindfocus="handleProxy" bindblur="handleProxy" data-eventid="{{'Ij7-0'}}" data-comkey="{{$k}}" />
+    <template wx:if="{{clearable_&&!displayable_&&value.length}}" color="#ccc" type="clear" size="20" bindtap="handleProxy" data-eventid="{{'fva-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'aJu-0'],$root}}" is="016b12ba"></template>
+    <template wx:if="{{displayable_}}" type="eye" size="20" bindtap="handleProxy" data-eventid="{{'eZy-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'Vha-1'],$root}}" is="016b12ba"></template>
   </view>
 </template>

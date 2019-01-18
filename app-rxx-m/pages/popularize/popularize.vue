@@ -6,7 +6,7 @@
 			<view @click="changeTab(2)" class="tab-item" :class="{active: oIndex===2}">佣金明细</view>
 		</view>
 		<view class="user-list" v-show="oIndex===0">
-			<view v-for="(item, index) in  list1" class="user">
+			<view :key="index" v-for="(item, index) in  list1" class="user">
 				<view>{{item.name}}</view>
 				<view>{{item.mobile}}</view>
 			</view>
@@ -19,7 +19,7 @@
 		</view>
 		
 		<view class="yongjin-list" v-show="oIndex===2">
-			<view v-for="(item, index) in yongjinList" class="uni-list-cell">
+			<view :key="index" v-for="(item, index) in yongjinList" class="uni-list-cell">
 				<view class="order-number">订单编号: {{item.orderNumber}} </view>
 				<view class="cell-mid">
 					<view class="apply-money h-70">客户名称: {{item.userNmae}} </view>

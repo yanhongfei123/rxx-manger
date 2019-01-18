@@ -1,6 +1,12 @@
 @import "../../common/vendor.wxss";
 
 @charset "UTF-8";
+.useraccount {
+  color: #FF9833;
+  font-size: 34rpx;
+  margin: 20rpx 0 0;
+  text-align: center;
+}
 .title {
   color: #1A1A1A;
   font-size: 34rpx;

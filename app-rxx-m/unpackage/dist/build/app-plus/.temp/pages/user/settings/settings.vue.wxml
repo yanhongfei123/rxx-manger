@@ -1,24 +1,24 @@
-<template name="3eb59b3a">
-  <view class="_view data-v-5f0ba104 content">
-    <view class="_view data-v-5f0ba104 reg-label"></view>
-    <view class="_view data-v-5f0ba104 input-group">
-      <navigator url="../../pwd/pwd" class="_navigator data-v-5f0ba104">
-        <view class="_view data-v-5f0ba104 input-row space-between">
-          <text class="_text data-v-5f0ba104 title">修改密码</text>
-          <view class="_view data-v-5f0ba104 icon-right"></view>
+<template name="3d14297a">
+  <view class="_view data-v-2a0254ea content">
+    <view class="_view data-v-2a0254ea reg-label"></view>
+    <view class="_view data-v-2a0254ea input-group">
+      <navigator url="../../pwd/pwd" class="_navigator data-v-2a0254ea">
+        <view class="_view data-v-2a0254ea input-row space-between">
+          <text class="_text data-v-2a0254ea title">修改密码</text>
+          <view class="_view data-v-2a0254ea icon-right"></view>
         </view>
       </navigator>
     </view>
-    <view class="_view data-v-5f0ba104 input-group">
-      <navigator url="../bind-alipay/bind-alipay" class="_navigator data-v-5f0ba104">
-        <view class="_view data-v-5f0ba104 input-row space-between">
-          <text style="width: 200rpx;" class="_text data-v-5f0ba104 title">绑定支付宝</text>
-          <view class="_view data-v-5f0ba104 icon-right"></view>
+    <view class="_view data-v-2a0254ea input-group">
+      <navigator url="../bind-alipay/bind-alipay" class="_navigator data-v-2a0254ea">
+        <view class="_view data-v-2a0254ea input-row space-between">
+          <text style="width: 200rpx;" class="_text data-v-2a0254ea title">绑定支付宝</text>
+          <view class="_view data-v-2a0254ea icon-right"></view>
         </view>
       </navigator>
     </view>
-    <view class="_view data-v-5f0ba104 btn-row">
-      <button type="primary" bindtap="handleProxy" data-eventid="{{'c9q-0'}}" data-comkey="{{$k}}" class="_button data-v-5f0ba104">退出登录</button>
+    <view class="_view data-v-2a0254ea btn-row">
+      <button type="primary" bindtap="handleProxy" data-eventid="{{'qW3-0'}}" data-comkey="{{$k}}" class="_button data-v-2a0254ea">退出登录</button>
     </view>
   </view>
 </template>

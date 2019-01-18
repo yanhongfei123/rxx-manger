@@ -116,6 +116,10 @@ const jpushSaveID = (params) => {
 	return fetchApi('POST','/jpush_saveID', params).then(res => res);
 }
 
+const getuseraccount = (params) => {
+	return fetchApi('POST','/getuseraccount', params).then(res => res);
+}
+
 export default {
 	weixinPay,
 	weixinLogin,
@@ -138,6 +142,7 @@ export default {
 	gettypelist,
 	getui,
 	bindAlipay,
-	jpushSaveID
+	jpushSaveID,
+	getuseraccount
 	
 };

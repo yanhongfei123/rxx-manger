@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<view class="useraccount">我的余额: {{ useraccount }}元</view>
 		<view class="title">请输入提现金额</view>
 		<view class="input-wrap">
 			  <view class="icon">￥</view>
@@ -16,23 +17,40 @@
 	export default {
 		data() {
 			return {
-				amount: ''
+				amount: '',
+				useraccount: 0,				
 			};
 		},
 		computed:{
 			
 		},
 		methods:{
-			getCash(){
+			getCash(){				
+				if(this.amount > this.useraccount){
+					this.Util.Toast.toast("余额不足");
+					return;
+				}
 				this.API.getCash({amount: this.amount}).then(res=>{
 					this.Util.Toast.toast("提现成功");
 				})
 			}
+		},
+		onLoad() {
+			this.API.getuseraccount().then(res=>{
+				var amount = parseFloat(res.data.Balance) - parseFloat(res.data.freeze);
+				this.useraccount = amount > 0 ? amount : 0;
+			})
 		}
 	}
 </script>
 
 <style lang="scss">
+	.useraccount{
+		color: #FF9833;
+		font-size: 34upx;
+		margin: 20upx 0 0;
+		text-align: center;
+	}
 	.title{
 		color: #1A1A1A;
 		font-size: 34upx;

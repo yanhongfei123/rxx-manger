@@ -1,12 +1,12 @@
 @import "../../common/vendor.wxss";
 
 @charset "UTF-8";
-.no-record.data-v-badabc44 {
+.no-record.data-v-92d5ff1e {
   text-align: center;
   margin-top: 100rpx;
   font-size: 34rpx;
 }
-.partner-item.data-v-badabc44 {
+.partner-item.data-v-92d5ff1e {
   margin-left: 30rpx;
   padding: 24rpx 0 24rpx;
   color: #1A1A1A;
@@ -16,6 +16,6 @@
   box-shadow: 0 1rpx 3rpx 0 #EBEBEB;
   line-height: 1;
 }
-.partner-item .mobile.data-v-badabc44 {
+.partner-item .mobile.data-v-92d5ff1e {
   margin-top: 16rpx;
 }

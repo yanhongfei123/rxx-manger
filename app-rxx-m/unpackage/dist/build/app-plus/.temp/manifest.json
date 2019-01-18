@@ -51,8 +51,8 @@
             "sdkConfigs" : {
                 "share" : {
                     "weixin" : {
-                        "appid" : "wxc845df2252038040",
-                        "appsecret" : "1c8f6ada2b9fb3fc97c94f771a79dce5"
+                        "appid" : "wx6331ac4c4303df03",
+                        "appsecret" : "86ee3db1db5e3254e2d40164b6128d6f"
                     },
                     "qq" : {
                         "appid" : "1107979247"
@@ -64,7 +64,7 @@
                     },
                     "appleiap" : {},
                     "weixin" : {
-                        "appid" : "wxc845df2252038040"
+                        "appid" : "wx6331ac4c4303df03"
                     }
                 },
                 "push" : {
@@ -122,6 +122,11 @@
             "postcss" : true,
             "minified" : true,
             "urlCheck" : false
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "你的位置信息将用于小程序位置接口的效果展示"
+            }
         }
     }
 }

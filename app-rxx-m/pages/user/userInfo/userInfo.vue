@@ -50,7 +50,7 @@
 				<view class="box-label">业务类型:</view>
 				<view class="box-cont">					
 					<view @tap="chooseType(item)" v-for="(item, index) in  businessTypeList" :key="index" class="flex box-item">				
-						<view :class="[item.isChecked?'checked':'']" class="select-btn">
+						<view :class="{ checked: item.isChecked }" class="select-btn">
 							<image src="/static/img/img/choosed.png" mode="widthFix"></image>
 						</view>
 						<view>{{item.name}}</view>
@@ -170,7 +170,8 @@
 			},
 			sexChange(evt) {
 				var id = parseInt(evt.detail.value);
-				this.form.SEX = id;
+				//this.form.SEX = id;
+				this.$set(this.form, 'SEX', id);				
 			},
 			goDetail(path) {
 				uni.navigateTo({
@@ -186,19 +187,26 @@
 				uni.removeStorageSync('idcardFront');
 				uni.removeStorageSync('idcardBack');		
 			},
-			save() {
+			save() {				
 				if(this.token){
-					this.form.business_type_id = this.form.business_type_id.toString();
+					//this.form.business_type_id = this.form.business_type_id.toString();
 					var params = {
 						...this.form,
+						business_type_id: this.form.business_type_id.toString(),
 						WORK_PERMIT: this.workCard,
 						ID_PHOTO: this.idcardFront,
 						ID_PHOTO_Negative: this.idcardBack,
 						PromotionCode: this.PromotionCode
 					};
+					if(this.form.business_type_id.length == 0){
+						this.Util.Toast.success("请选择业务类型");
+						return
+					}
+					
 					this.API.updateManager(params).then(res => {
 						this.Util.Toast.success("保存成功");		
 						this.removeStorage();
+						uni.setStorageSync('business_type_id', JSON.stringify(this.form.business_type_id));
 						uni.setStorageSync('userInfo', JSON.stringify(res.data));
 						setTimeout(() => {
 							uni.switchTab({
@@ -210,6 +218,7 @@
 				}
 				var params = {
 					...this.form,
+					business_type_id: this.form.business_type_id.toString(),
 					smscode: this.smscode,
 					//AVATAR: this.logoSrc,
 					WORK_PERMIT: this.workCard,
@@ -222,10 +231,16 @@
 					return
 				}
 				
+				if(this.form.business_type_id.length == 0){
+					this.Util.Toast.success("请选择业务类型");
+					return
+				}
+				
 				this.API.registerManager(params).then(res => {
 					this.Util.Toast.success("注册成功");
 					this.removeStorage();
 					uni.setStorageSync('userInfo', JSON.stringify(res.data));
+					uni.setStorageSync('business_type_id', JSON.stringify(this.form.business_type_id));
 					setTimeout(() => {
 						uni.navigateTo({
 							url: `/pages/login/login`
@@ -240,6 +255,27 @@
 						}, 1000)
 					}
 				})
+			},
+			setTypeLight(){ // 之前选过的业务，进入页面默认选中
+				var typeid = uni.getStorageSync('business_type_id');
+				console.log(typeid)
+				if(typeid){
+					var typelist = JSON.parse(typeid);
+					this.$set(this.form, 'business_type_id' , typelist);
+					console.log(typelist)
+					var list = [];												
+					typelist.map((id,index)=>{						
+					  list = this.businessTypeList.map((val, i)=>{
+								if(val.ID == id){
+									val.isChecked = true;
+									//return val;
+								}
+								return val
+							})
+						});
+					this.businessTypeList = list;	
+					console.log(this.businessTypeList)	
+				}
 			}
 		},
 		onLoad(option) {
@@ -263,11 +299,12 @@
 					return  item
 				});
 				
-			});
-				 
-					
+				this.setTypeLight();
+				
+			});	
 		},
-		onShow() {
+		onShow() {	
+			
 			// 登陆后个人信息存在本地的userInfo
 			if (this.token) {
 				var userInfo = JSON.parse(uni.getStorageSync('userInfo'));
@@ -281,20 +318,18 @@
 					form[key] = newUserInfo[key];
 				}
 				this.form = form;
-								
+				//this.$set('')
+			
 				this.isWordCardUploaded = uni.getStorageSync('workCard') || newUserInfo.WORK_PERMIT;
 				this.isIdCardUploaded = (uni.getStorageSync('idcardFront') && uni.getStorageSync('idcardBack')) || (!!newUserInfo.ID_PHOTO && !!newUserInfo.ID_PHOTO_Negative);
 						
 				this.workCard = 	uni.getStorageSync('workCard')    || newUserInfo.WORK_PERMIT	;
 				this.idcardFront = 	uni.getStorageSync('idcardFront') || newUserInfo.ID_PHOTO	;
 				this.idcardBack = 	uni.getStorageSync('idcardBack')  || newUserInfo.ID_PHOTO_Negative;
-				
-				console.log(this.isWordCardUploaded)
-				console.log(this.isIdCardUploaded)
-				
+
 				return
 			}
-			
+					
 			this.workCard = uni.getStorageSync('workCard');
 			this.idcardFront = uni.getStorageSync('idcardFront');
 			this.idcardBack = uni.getStorageSync('idcardBack');

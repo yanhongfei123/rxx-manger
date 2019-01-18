@@ -14,13 +14,13 @@
 				</view>
 				<view class="cell-btm">
 					<view class="order-des">{{item.typename}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.Career}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.Property}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.car}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.bank_flow}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.Credit}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.census}}</view>
-					<view class="order-des">{{item.CUSTOMER.customer.Social_security}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.Career}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.Property}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.car}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.bank_flow}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.Credit}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.census}}</view>
+					<view class="order-des">{{item.CUSTOMER.customer && item.CUSTOMER.customer.Social_security}}</view>
 				</view>
 				<view class="box-shadow"></view>
 			</view>

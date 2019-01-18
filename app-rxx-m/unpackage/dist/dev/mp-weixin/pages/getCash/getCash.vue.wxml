@@ -1,12 +1,13 @@
-<template name="3c22baa4">
-  <view class="_view data-v-ab57e4c0 content">
-    <view class="_view data-v-ab57e4c0 title">请输入提现金额</view>
-    <view class="_view data-v-ab57e4c0 input-wrap">
-      <view class="_view data-v-ab57e4c0 icon">￥</view>
-      <input value="{{amount}}" bindinput="handleProxy" type="number" data-eventid="{{'bAp-0'}}" data-comkey="{{$k}}" class="_input data-v-ab57e4c0" />
+<template name="3ac91724">
+  <view class="_view data-v-8353279a content">
+    <view class="_view data-v-8353279a useraccount">我的余额: {{ useraccount }}元</view>
+    <view class="_view data-v-8353279a title">请输入提现金额</view>
+    <view class="_view data-v-8353279a input-wrap">
+      <view class="_view data-v-8353279a icon">￥</view>
+      <input value="{{amount}}" bindinput="handleProxy" type="number" data-eventid="{{'Yrb-0'}}" data-comkey="{{$k}}" class="_input data-v-8353279a" />
     </view>
-    <view class="_view data-v-ab57e4c0 btn-row">
-      <button type="primary" class="_button data-v-ab57e4c0 primary" disabled="{{!amount}}" bindtap="handleProxy" data-eventid="{{'ZrL-1'}}" data-comkey="{{$k}}">提现</button>
+    <view class="_view data-v-8353279a btn-row">
+      <button type="primary" class="_button data-v-8353279a primary" disabled="{{!amount}}" bindtap="handleProxy" data-eventid="{{'z9A-1'}}" data-comkey="{{$k}}">提现</button>
     </view>
   </view>
 </template>

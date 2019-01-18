@@ -1,1 +1,1 @@
-<import src="/pages/user/userInfo/businessCard.vue.wxml" /><template is="66eebb0c" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/user/userInfo/businessCard.vue.wxml" /><template is="482f93de" data="{{ ...$root['0'], $root }}"/>

@@ -27,7 +27,7 @@
 			<view @tap="showMask(true)" class="uni-list-cell">
 				<image style="width: 36upx;height: 36upx;" class="icon" mode="widthFix" src="/static/img/friend.png" />
 				<view class="input-row  space-between">
-					<text class="title">好友</text>
+					<text class="title">分享</text>
 					<view class="icon-right"></view>
 				</view>
 			</view>
@@ -38,7 +38,7 @@
 			<view class="uni-list-cell">
 				<image style="width: 36upx;height: 36upx;" class="icon" mode="widthFix" src="/static/img/friend.png" />
 				<view class="input-row  space-between">
-					<text class="title">好友</text>
+					<text class="title">分享</text>
 					<view class="icon-right"></view>
 					<button class="share-btn" open-type="share"></button>
 				</view>
@@ -122,9 +122,9 @@
 	export default {
 		onShareAppMessage() {
 			return {
-				title: this.title,
-				path: '/pages/home/home',
-				imageUrl: this.imageUrl
+				title: this.shareParams.title,
+				path: '/pages/reg/reg?PromotionCode=1111111',
+				imageUrl: 'https://m-fat.wolaidai.com/web-static/webapp/auto/img/home_banner_new_user.png'
 			}
 		},
 		data() {
@@ -132,10 +132,10 @@
 				shareParams: {
 					provider: "weixin",
 					type: 0,
-					href: "https://www.baidu.com/",
+					href: "http://api.rongxiaoxiao.com/about_manager",
 					title: "融小小分享",
 					summary: "融小小分享内容",
-					imageUrl: "/static/img/about.png",
+					imageUrl: "https://m-fat.wolaidai.com/web-static/webapp/auto/img/home_banner_new_user.png",
 				},
 				isShowMask: false,
 				phone: '',

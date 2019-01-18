@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<web-view :webview-styles="webviewStyles" src="http://api.rongxiaoxiao.com/about"></web-view>
+		<web-view :webview-styles="webviewStyles" src="http://api.rongxiaoxiao.com/about_manager"></web-view>
 	</view>
 </template>
 
