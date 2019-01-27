@@ -49,16 +49,23 @@
 			<view v-show="isshowbox" class="box-list  flex">
 				<view class="box-label">业务类型:</view>
 				<view class="box-cont">
-					<view @tap="chooseType(item)" v-for="(item, index) in  businessTypeList" :key="index" class="flex box-item">
-						<view :class="{ checked: item.isChecked }" class="select-btn">
+					<!-- <view @tap="chooseType(item)" v-for="(item, index) in  businessTypeList" :key="index" class="flex box-item">
+						<view :class="{checked:item.isChecked}" class="select-btn">
 							<image src="/static/img/img/choosed.png" mode="widthFix"></image>
 						</view>
 						<view>{{item.name}}</view>
+					</view> -->
+					
+					 <view class="checkbox-list">
+						<checkbox-group @change="checkboxChange">
+							<label class="uni-list-cell uni-list-cell-pd" v-for="item in businessTypeList" :key="item.ID">								
+								<view><checkbox :value="item.ID" :checked="item.isChecked" /> {{item.name}}</view>
+							</label>
+						</checkbox-group>
 					</view>
-
+			
 				</view>
 			</view>
-
 			<view class="input-row  space-between">
 				<text class="title">身份证号码</text>
 				<input maxlength="20" @input="inputChange" placeholder-class="placeholder" type="text" clearable v-model="form.ID_CARD_NO"
@@ -145,11 +152,43 @@
 				isWordCardUploaded: false,
 				isshowbox: false,
 				typeId: [],
+				items: [{
+                    value: 'USA',
+                    name: '美国'
+                },
+                {
+                    value: 'CHN',
+                    name: '中国',
+                    checked: 'true'
+                },
+                {
+                    value: 'BRA',
+                    name: '巴西'
+                },
+                {
+                    value: 'JPN',
+                    name: '日本'
+                },
+                {
+                    value: 'ENG',
+                    name: '英国'
+                },
+                {
+                    value: 'FRA',
+                    name: '法国'
+                }
+            ]
 			}
 		},
 		methods: {
 			inputChange() {
 				//!this.token && uni.setStorageSync('form', JSON.stringify(this.form));
+			},
+			checkboxChange: function (e) {
+				var values = e.detail.value;
+				console.log(e.detail.value);
+				this.form.business_type_id = values;
+				
 			},
 			chooseType(item) {
 				if (!item.isChecked) {
@@ -259,11 +298,9 @@
 			},
 			setTypeLight() { // 之前选过的业务，进入页面默认选中
 				var typeid = uni.getStorageSync('business_type_id');
-				console.log(typeid)
 				if (typeid) {
 					var typelist = JSON.parse(typeid);
 					this.$set(this.form, 'business_type_id', typelist);
-					console.log(typelist)
 					var list = [];
 					typelist.map((id, index) => {
 						list = this.businessTypeList.map((val, i) => {
@@ -275,7 +312,7 @@
 						})
 					});
 					this.businessTypeList = list;
-					console.log(this.businessTypeList)
+					//console.log(this.businessTypeList)
 				}
 			}
 		},
@@ -344,6 +381,10 @@
 </script>
 
 <style lang="scss">
+	.checkbox-list label{
+		display: inline-block;
+		margin: 0 30upx 20upx 0;
+	}
 	.placeholder {
 		color: #BBB;
 		font-size: 32upx;
