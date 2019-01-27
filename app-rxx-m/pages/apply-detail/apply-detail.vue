@@ -8,7 +8,7 @@
 					<view class="des">贷款金额</view>
 				</view>
 				<view class="mar110">
-					<view class="date">{{applyDetail.cyclename}}</view>
+					<view class="date">{{applyDetail.cyclename||'无信息'}}</view>
 					<view class="des">贷款期限</view>
 				</view>
 				<view>
@@ -19,14 +19,14 @@
 			<view class="cell-btm">
 				<view class="info-title">基本信息</view>
 				<view class="user-info">
-					<view>姓名: {{applyDetail.name}}</view>
-					<view>年龄: {{applyDetail.age}}</view>
-					<view>月收入: {{applyDetail.income ||  ''}}</view>
-					<view>信用情况: {{applyDetail.Credit}}</view>
+					<view>姓名: {{applyDetail.name || '无信息'}}</view>
+					<view>年龄: {{applyDetail.age || '无信息'}}</view>
+					<view>月收入: {{applyDetail.income ||  '无信息'}}</view>
+					<view>信用情况: {{applyDetail.Credit || '无信息'}}</view>
 				</view>
 			</view>
 		</view>
-		<view class="tips">提示：此信息由客户自信提交，请自行审核判断真伪</view>
+		<view class="tips">提示：此信息由客户自行提交，请自行审核判断真伪</view>
 		
 	</view>
 </template>

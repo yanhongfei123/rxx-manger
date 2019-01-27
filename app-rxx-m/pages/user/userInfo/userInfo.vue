@@ -3,12 +3,12 @@
 		<view class="reg-label"></view>
 		<view class="input-group">
 			<view class="input-row  space-between">
-				<text class="title">姓名</text>			
+				<text class="title">姓名</text>
 				<input @input="inputChange" type="text" placeholder-class="placeholder" v-model="form.NAME" placeholder="请输入姓名" />
 			</view>
 			<view class="input-row  space-between">
 				<text class="title">手机号</text>
-				<input @input="inputChange" type="text" placeholder-class="placeholder"  v-model="form.PHONE" placeholder="请输入手机号码" />
+				<input @input="inputChange" type="text" placeholder-class="placeholder" v-model="form.PHONE" placeholder="请输入手机号码" />
 			</view>
 			<view v-show="!token" class="input-row  space-between">
 				<text class="title">设置密码</text>
@@ -27,7 +27,7 @@
 
 			<view class="input-row  space-between">
 				<text class="title">公司名称</text>
-				<input @input="inputChange" type="text" placeholder-class="placeholder"  v-model="form.COMPANY_NAME" placeholder="请输入公司名称" />
+				<input @input="inputChange" type="text" placeholder-class="placeholder" v-model="form.COMPANY_NAME" placeholder="请输入公司名称" />
 			</view>
 
 			<view class="input-row  space-between">
@@ -38,51 +38,52 @@
 				<view class="icon-right"></view>
 			</view>
 
-			<view @tap="isshowbox=!isshowbox" class="input-row  space-between">				
-				<text class="title">业务类型</text>				
+			<view @tap="isshowbox=!isshowbox" class="input-row  space-between">
+				<text class="title">业务类型</text>
 				<!-- <picker class="picker-item" mode="multiSelector" :range="businessTypeList" range-key="text" @change="pickerBusinessType">
 					<view class="picker-btn">{{ businessTypeList[form.business_type_id - 1].text }}</view>
 				</picker> -->
-				<view class="icon-right"></view> 
+				<view class="icon-right"></view>
 			</view>
-			
+
 			<view v-show="isshowbox" class="box-list  flex">
 				<view class="box-label">业务类型:</view>
-				<view class="box-cont">					
-					<view @tap="chooseType(item)" v-for="(item, index) in  businessTypeList" :key="index" class="flex box-item">				
+				<view class="box-cont">
+					<view @tap="chooseType(item)" v-for="(item, index) in  businessTypeList" :key="index" class="flex box-item">
 						<view :class="{ checked: item.isChecked }" class="select-btn">
 							<image src="/static/img/img/choosed.png" mode="widthFix"></image>
 						</view>
 						<view>{{item.name}}</view>
 					</view>
-									
+
 				</view>
 			</view>
-			
+
 			<view class="input-row  space-between">
 				<text class="title">身份证号码</text>
-				<input maxlength="20" @input="inputChange" placeholder-class="placeholder" type="text" clearable v-model="form.ID_CARD_NO" placeholder="请输入身份证号码" />
+				<input maxlength="20" @input="inputChange" placeholder-class="placeholder" type="text" clearable v-model="form.ID_CARD_NO"
+				 placeholder="请输入身份证号码" />
 			</view>
 
 			<view class="input-row  space-between">
 				<text class="title">身份证有效期</text>
-				<input @input="inputChange" type="text" placeholder-class="placeholder"  v-model="form.VALIDITY" placeholder="请输入身份证有效期" />
+				<input @input="inputChange" type="text" placeholder-class="placeholder" v-model="form.VALIDITY" placeholder="请输入身份证有效期" />
 			</view>
 
 			<view class="input-row  space-between" @tap="goDetail('userInfo/idCard')">
 				<text class="title">身份证</text>
-				 <!-- <image v-show="isIdCardUploaded" :src="ID_PHOTO" class="idcard idcard1" mode="aspectFit"></image>
+				<!-- <image v-show="isIdCardUploaded" :src="ID_PHOTO" class="idcard idcard1" mode="aspectFit"></image>
 				 <image v-show="isIdCardUploaded" :src="ID_PHOTO_Negative" class="idcard idcard2" mode="aspectFit"></image> -->
-				 
-				 <view v-show="isIdCardUploaded" class="idcard-des des">已上传</view>
-				 <view v-show="!isIdCardUploaded" class="idcard-des des">未上传</view>
+
+				<view v-show="isIdCardUploaded" class="idcard-des des">已上传</view>
+				<view v-show="!isIdCardUploaded" class="idcard-des des">未上传</view>
 				<view class="icon-right"></view>
 			</view>
 
 			<view class="input-row  space-between" @tap="goDetail('userInfo/workCard')">
 				<text class="title">工作证</text>
 				<!-- <image v-show="isWordCardUploaded"  :src="WORK_PERMIT" class="workcard" mode="aspectFit"></image> -->
-				
+
 				<view v-show="isWordCardUploaded" class="workcard-des des">已上传</view>
 				<view v-show="!isWordCardUploaded" class="workcard-des des">未上传</view>
 				<view class="icon-right"></view>
@@ -150,14 +151,14 @@
 			inputChange() {
 				//!this.token && uni.setStorageSync('form', JSON.stringify(this.form));
 			},
-			chooseType(item){				
-				if(!item.isChecked){
+			chooseType(item) {
+				if (!item.isChecked) {
 					!this.form.business_type_id.includes(item.ID) && this.form.business_type_id.push(item.ID)
-				}else{
+				} else {
 					var index = this.form.business_type_id.indexOf(item.ID);
-					this.form.business_type_id.splice(index,1 );
+					this.form.business_type_id.splice(index, 1);
 				}
-				
+
 				item.isChecked = !item.isChecked;
 
 			},
@@ -171,24 +172,24 @@
 			sexChange(evt) {
 				var id = parseInt(evt.detail.value);
 				//this.form.SEX = id;
-				this.$set(this.form, 'SEX', id);				
+				this.$set(this.form, 'SEX', id);
 			},
 			goDetail(path) {
 				uni.navigateTo({
 					url: `/pages/user/${path}`
 				})
 			},
-			removeStorage(){
+			removeStorage() {
 				uni.removeStorageSync('form');
 				uni.removeStorageSync('phone');
 				uni.removeStorageSync('smscode');
 				uni.removeStorageSync('workCard');
 				uni.removeStorageSync('businessCard');
 				uni.removeStorageSync('idcardFront');
-				uni.removeStorageSync('idcardBack');		
+				uni.removeStorageSync('idcardBack');
 			},
-			save() {				
-				if(this.token){
+			save() {
+				if (this.token) {
 					//this.form.business_type_id = this.form.business_type_id.toString();
 					var params = {
 						...this.form,
@@ -198,13 +199,13 @@
 						ID_PHOTO_Negative: this.idcardBack,
 						PromotionCode: this.PromotionCode
 					};
-					if(this.form.business_type_id.length == 0){
+					if (this.form.business_type_id.length == 0) {
 						this.Util.Toast.success("请选择业务类型");
 						return
 					}
-					
+
 					this.API.updateManager(params).then(res => {
-						this.Util.Toast.success("保存成功");		
+						this.Util.Toast.success("保存成功");
 						this.removeStorage();
 						uni.setStorageSync('business_type_id', JSON.stringify(this.form.business_type_id));
 						uni.setStorageSync('userInfo', JSON.stringify(res.data));
@@ -226,16 +227,16 @@
 					ID_PHOTO_Negative: this.idcardBack,
 					PromotionCode: this.PromotionCode
 				};
-				if(!this.form.PASSWORD){
+				if (!this.form.PASSWORD) {
 					this.Util.Toast.success("请设置密码");
 					return
 				}
-				
-				if(this.form.business_type_id.length == 0){
+
+				if (this.form.business_type_id.length == 0) {
 					this.Util.Toast.success("请选择业务类型");
 					return
 				}
-				
+
 				this.API.registerManager(params).then(res => {
 					this.Util.Toast.success("注册成功");
 					this.removeStorage();
@@ -256,25 +257,25 @@
 					}
 				})
 			},
-			setTypeLight(){ // 之前选过的业务，进入页面默认选中
+			setTypeLight() { // 之前选过的业务，进入页面默认选中
 				var typeid = uni.getStorageSync('business_type_id');
 				console.log(typeid)
-				if(typeid){
+				if (typeid) {
 					var typelist = JSON.parse(typeid);
-					this.$set(this.form, 'business_type_id' , typelist);
+					this.$set(this.form, 'business_type_id', typelist);
 					console.log(typelist)
-					var list = [];												
-					typelist.map((id,index)=>{						
-					  list = this.businessTypeList.map((val, i)=>{
-								if(val.ID == id){
-									val.isChecked = true;
-									//return val;
-								}
-								return val
-							})
-						});
-					this.businessTypeList = list;	
-					console.log(this.businessTypeList)	
+					var list = [];
+					typelist.map((id, index) => {
+						list = this.businessTypeList.map((val, i) => {
+							if (val.ID == id) {
+								val.isChecked = true;
+								//return val;
+							}
+							return val
+						})
+					});
+					this.businessTypeList = list;
+					console.log(this.businessTypeList)
 				}
 			}
 		},
@@ -285,26 +286,26 @@
 			} = option;
 			this.phone = uni.getStorageSync('phone');
 			this.$set(this.form, 'PHONE', this.phone);
-			
+
 			this.smscode = uni.getStorageSync('smscode');
 			//this.logoSrc = uni.getStorageSync('logoSrc');
-			this.PromotionCode = PromotionCode || '';	
-			
-			
+			this.PromotionCode = PromotionCode || '';
+
+
 			//业务类型
-			
+
 			this.API.gettypelist().then(res => {
-				this.businessTypeList = res.data.map((item,index)=>{
+				this.businessTypeList = res.data.map((item, index) => {
 					item.isChecked = false;
-					return  item
+					return item
 				});
-				
+
 				this.setTypeLight();
-				
-			});	
+
+			});
 		},
-		onShow() {	
-			
+		onShow() {
+
 			// 登陆后个人信息存在本地的userInfo
 			if (this.token) {
 				var userInfo = JSON.parse(uni.getStorageSync('userInfo'));
@@ -319,22 +320,23 @@
 				}
 				this.form = form;
 				//this.$set('')
-			
+
 				this.isWordCardUploaded = uni.getStorageSync('workCard') || newUserInfo.WORK_PERMIT;
-				this.isIdCardUploaded = (uni.getStorageSync('idcardFront') && uni.getStorageSync('idcardBack')) || (!!newUserInfo.ID_PHOTO && !!newUserInfo.ID_PHOTO_Negative);
-						
-				this.workCard = 	uni.getStorageSync('workCard')    || newUserInfo.WORK_PERMIT	;
-				this.idcardFront = 	uni.getStorageSync('idcardFront') || newUserInfo.ID_PHOTO	;
-				this.idcardBack = 	uni.getStorageSync('idcardBack')  || newUserInfo.ID_PHOTO_Negative;
+				this.isIdCardUploaded = (uni.getStorageSync('idcardFront') && uni.getStorageSync('idcardBack')) || (!!newUserInfo.ID_PHOTO &&
+					!!newUserInfo.ID_PHOTO_Negative);
+
+				this.workCard = uni.getStorageSync('workCard') || newUserInfo.WORK_PERMIT;
+				this.idcardFront = uni.getStorageSync('idcardFront') || newUserInfo.ID_PHOTO;
+				this.idcardBack = uni.getStorageSync('idcardBack') || newUserInfo.ID_PHOTO_Negative;
 
 				return
 			}
-					
+
 			this.workCard = uni.getStorageSync('workCard');
 			this.idcardFront = uni.getStorageSync('idcardFront');
 			this.idcardBack = uni.getStorageSync('idcardBack');
-										
-			this.isWordCardUploaded = !!uni.getStorageSync('workCard') ;
+
+			this.isWordCardUploaded = !!uni.getStorageSync('workCard');
 			this.isIdCardUploaded = !!uni.getStorageSync('idcardFront') && !!uni.getStorageSync('idcardBack');
 
 		}
@@ -342,54 +344,66 @@
 </script>
 
 <style lang="scss">
-	.placeholder{
-	    color:#BBB;	
+	.placeholder {
+		color: #BBB;
 		font-size: 32upx;
 	}
-	.flex{
+
+	.flex {
 		display: flex;
 		align-items: center;
 	}
-	.box-list{
+
+	.box-list {
 		font-size: 30upx;
 		padding: 20upx 30upx;
-		.box-label{
+
+		.box-label {
 			width: 250upx;
 		}
-		.box-cont{
+
+		.box-cont {
 			overflow: hidden;
 		}
-		.box-item{
+
+		.box-item {
 			float: left;
 			width: 40%;
-			margin:0 0 20upx;
-			padding: 0;;
-			
+			margin: 0 0 20upx;
+			padding: 0;
+			;
+
 		}
 	}
+
 	.select-btn {
 		width: 24upx;
 		height: 24upx;
 		border: 2upx solid #FF9833;
 		border-radius: 4upx;
-        margin-right: 10upx;
+		margin-right: 10upx;
+
 		image {
 			width: 24upx;
 			height: 24upx;
 			display: none;
 		}
-		&.checked{
-			image{
+
+		&.checked {
+			image {
 				display: block;
 			}
 		}
 	}
+
 	.input-row {
 		position: relative;
+
 		.title {
 			width: 200upx;
 		}
-		.des{
+
+		.des {
 			position: absolute;
 			right: 100upx;
 			top: 50%;
@@ -397,17 +411,20 @@
 			color: #BBB;
 			font-size: 30upx;
 		}
-	    .idcard{
+
+		.idcard {
 			height: 100upx;
 			position: absolute;
 			right: 100upx;
 			top: 50%;
 			transform: translateY(-50%);
 		}
-		.idcard2{
+
+		.idcard2 {
 			right: 120upx;
 		}
-		.workcard{
+
+		.workcard {
 			height: 100upx;
 			position: absolute;
 			right: 100upx;
@@ -415,6 +432,7 @@
 			transform: translateY(-50%);
 		}
 	}
+
 	.reg-label {
 		margin: 40upx 0 0 0;
 	}

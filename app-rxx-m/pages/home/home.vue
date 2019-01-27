@@ -9,18 +9,17 @@
 			</view>
 		</view>
 		<view class="split"></view>
-		<view class="action-block">
+		<view class="action-block" @tap.stop="getOrder()">
 			<image src="../../static/img/home/action-btn.png"></image>
 		</view>
 		
-	
-	<!-- 	<button @tap="openPush" type="primary">开始监听推送消息</button>
+	<!-- <button @tap="openPush" type="primary">开始监听推送消息</button>
 		<button @tap="closePush" type="primary">关闭监听推送消息</button>	
- -->
+	-->
 		
 		<view class="customer-list">
 			<view class="title">周边借款人</view>			
-      <view v-show="!orderList.length" class="no-data">暂无数据</view>
+			<view v-show="!orderList.length" class="no-data">暂无数据</view>
 			<view class="uni-list">
 				<view @tap="goDetail('apply-detail/apply-detail', item)" class="uni-list-cell" v-for="(item,index) in orderList"
 				 :key="index">
@@ -29,19 +28,19 @@
 						<view @tap.stop="getOrder(item.ID)" class="get-order">抢单</view>
 					</view>
 					<view class="cell-mid">
-						<view class="amount">{{item.amount}}</view>
-						<view class="date">{{item.cyclename}}</view>
-						<view class="time">{{item.UPDATE_TIME}}</view>
+						<view class="amount">{{item.amount || '0'}}</view>
+						<view class="date">{{item.cyclename || '无'}}</view>
+						<view class="time">{{item.UPDATE_TIME || '无'}}</view>
 					</view>
 					<view class="cell-btm">
 						<view class="order-des">{{item.typename}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Career || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Property || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.car || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.bank_flow || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Credit || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.census || ''}}</view>
-						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Social_security || ''}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Career || '无'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Property || '无'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.car || '无信息'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.bank_flow || '无信息'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Credit || '无信息'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.census || '无信息'}}</view>
+						<view class="order-des">{{ item.CUSTOMER.customer && item.CUSTOMER.customer.Social_security || '无信息'}}</view>
 					</view>
 					<view class="box-shadow"></view>
 				</view>
@@ -522,6 +521,7 @@
 				
 				// 客户新申请的订单
 				socket.on('order', (data) => {
+					this.getOrderByNearby();
 					this.Util.Toast.toast('接收到客户新的订单:' + JSON.stringify(data));
 					if (this.audioAction.method == 'pause') {
 						this.audioAction.method = 'play';
@@ -532,7 +532,14 @@
 					this.Util.Toast.toast('The client has disconnected!');
 				});
 			},
-
+			getOrderByNearby() {
+				this.API.getOrderbynearby().then(res => {
+					this.orderList = res.data.map((item, index) => {
+						item.UPDATE_TIME = this.Util.getLastTime(Number(item.UPDATE_TIME));
+						return item
+					});
+				})
+			}
 		},
 		onUnload() {
 			 clearInterval(this.timer);
@@ -582,11 +589,12 @@
 							//plus.nativeUI.alert('监听透传成功');
 					},
 					callback: function (data) {
-							plus.nativeUI.alert("接收到透传数据：" + JSON.stringify(data));
+							// plus.nativeUI.alert("接收到透传数据：" + JSON.stringify(data));
 // 							plus.push.createMessage('哈哈哈','payload', {
 // 								title: '我是标题',
 // 								icon: '../../static/img/app-logo.png'
 // 							} );
+							that.getOrderByNearby();
 							if (that.audioAction.method == 'pause') {
 								that.audioAction.method = 'play';
 							}		
@@ -610,14 +618,7 @@
 			}
 
 			!this.hasConnected && this.initSocket();
-
-			this.API.getOrderbynearby().then(res => {
-				this.orderList = res.data.map((item, index) => {
-					item.UPDATE_TIME = this.Util.getLastTime(Number(item.UPDATE_TIME));
-					return item
-				});
-
-			})
+			this.getOrderByNearby();
 		}
 	}
 </script>

@@ -8,6 +8,12 @@ import Promise from '../libs/js/bluebird' //为了兼容异步请求问题
 const checkCode = (resolve, res, reject) => {
 	if (res.code === 0) {
 		resolve(res);
+	}else if(res.code == -2000){
+		console.log(res);
+		uni.redirectTo({
+			url: "/pages/login/login"
+		});
+		uni.clearStorageSync();
 	} else {
 		uni.showToast({
 			title: res.message,

@@ -5,11 +5,11 @@
 			<view @tap="goDetail('apply-detail/apply-detail', item)" v-for="(item, index) in orderList" class="uni-list-cell" :key="index">
 				<view class="order-number">订单编号: {{item.order_num}} </view>
 				<view class="cell-mid">
-					<view class="apply-money h-70">客户姓名: {{item.CUSTOMER.user.NAME}}</view>
-					<view class="apply-money h-70">客户手机号: {{item.CUSTOMER.user.PHONE}}</view>
-					<view class="apply-name h-70">贷款产品: {{item.productname}} </view>
-					<view class="apply-type h-70">贷款类型: {{item.typename}} </view>
-					<view  class="apply-date h-70">贷款周期: {{item.cyclename ||  ''}} </view>
+					<view class="apply-money h-70">客户姓名: {{item.CUSTOMER.user.NAME || '无'}}</view>
+					<view class="apply-money h-70">客户手机号: {{item.CUSTOMER.user.PHONE || '无'}}</view>
+					<view class="apply-name h-70">贷款产品: {{item.productname || '无'}} </view>
+					<view class="apply-type h-70">贷款类型: {{item.typename || '无'}} </view>
+					<view  class="apply-date h-70">贷款周期: {{item.cyclename || '无'}} </view>
 				</view>			
 			</view>
 		</view>

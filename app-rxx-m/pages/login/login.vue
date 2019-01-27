@@ -5,7 +5,7 @@
 			<view class="input-group">
 				<view class="input-row border">
 					<image class="icon-m icon" src="../../static/img/shouji.png" />
-					<uni-input class="uni-input" maxlength="11" type="text" clearable focus v-model="account" placeholder="请输入手机号"></uni-input>
+					<uni-input class="uni-input" maxlength="11" type="tel" clearable focus v-model="account" placeholder="请输入手机号"></uni-input>
 				</view>
 				<view class="input-row">
 					<image class="icon-p icon" src="../../static/img/suo.png" />
@@ -25,7 +25,7 @@
 			</view>
 
 			<view class="footer">
-				<view class="footer-des">信贷经理请下载融小小经理端，此版为贷款用户专用</view>
+				<view class="footer-des">信贷用户请下载融小小客户端，此版为贷款经理专用</view>
 				<view class="down-load">立即下载</view>
 			</view>
 		</view>
