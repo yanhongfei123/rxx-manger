@@ -300,7 +300,8 @@
 				var typeid = uni.getStorageSync('business_type_id');
 				if (typeid) {
 					var typelist = JSON.parse(typeid);
-					this.$set(this.form, 'business_type_id', typelist);
+					//this.$set(this.form, 'business_type_id', typelist);
+					this.form.business_type_id = typelist;
 					var list = [];
 					typelist.map((id, index) => {
 						list = this.businessTypeList.map((val, i) => {
@@ -323,26 +324,21 @@
 			} = option;
 			this.phone = uni.getStorageSync('phone');
 			this.$set(this.form, 'PHONE', this.phone);
-
 			this.smscode = uni.getStorageSync('smscode');
 			//this.logoSrc = uni.getStorageSync('logoSrc');
 			this.PromotionCode = PromotionCode || '';
-
-
-			//业务类型
-
+		},
+		onShow() {
+			//业务类型 =>  之前选过的业务，进入页面默认选中
 			this.API.gettypelist().then(res => {
 				this.businessTypeList = res.data.map((item, index) => {
 					item.isChecked = false;
 					return item
 				});
-
+			
 				this.setTypeLight();
-
+			
 			});
-		},
-		onShow() {
-
 			// 登陆后个人信息存在本地的userInfo
 			if (this.token) {
 				var userInfo = JSON.parse(uni.getStorageSync('userInfo'));
